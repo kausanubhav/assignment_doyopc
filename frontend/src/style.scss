@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.form-container {
+  background-color: #231b1a;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .form-wrapper {
+    background-image: url("https://images.pexels.com/photos/2055389/pexels-photo-2055389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: 80% 50%;
+    background-repeat: none;
+    padding: 20px 60px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    .logo {
+      color: rgb(255,232,123);
+      font-weight: bold;
+      font-size: 70px;
+      font-family: "Pacifico", cursive;
+    }
+    .title {
+      color: rgb(31, 96, 68);
+      font-size: 38px;
+      font-weight: bold;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      input {
+        padding: 15px;
+        border: none;
+        width: 250px;
+        border: 2px solid rgb(19, 223, 107);
+        border-radius: 10px;
+        box-shadow: rgb(115, 184, 224);
+        color: rgb(37, 202, 133);
+        font-size: 14px;
+        font-weight: bold;
+        border-bottom: 1px solid rgb(15, 101, 36);
+
+        &::placeholder {
+          color: rgb(27, 209, 103);
+        }
+      }
+      input:focus {
+        outline-color: rgb(23, 119, 58);
+        color: rgb(1, 59, 26);
+      }
+
+      
+      button {
+        background-color: rgb(32, 111, 54);
+        border: none;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      
+    }
+   
+  }
+}
+
+
+
+
