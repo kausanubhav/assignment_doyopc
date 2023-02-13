@@ -26,7 +26,7 @@ export default function Register() {
   return (
     <div className="form-container">
       <div className="form-wrapper">
-        <span className="logo">MOPOGOs</span>
+        <span className="logo">MAPOGOs</span>
         <span className="title">Join now</span>
         <form onSubmit={handleSubmit}>
           <input type="email" placeholder="Email" />

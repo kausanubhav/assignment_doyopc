@@ -13,6 +13,13 @@ const db = admin.firestore()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("build"))
+  app.get("*", (req, res) => {
+    req.sendFile(path.resolve(__dirname, "build", "index.html"))
+  })
+}
+
 //Create a user
 app.post("/create", async (req, res) => {
   try {
@@ -55,8 +62,6 @@ app.get("/read/:id", async (req, res) => {
     res.send(error)
   }
 })
-
-
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT, () => {

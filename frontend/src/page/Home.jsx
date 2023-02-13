@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import { DataGrid } from "@mui/x-data-grid"
 import axios from "axios"
 import { Box } from "@mui/system"
-import { useControlled } from "@mui/material"
 
 const API_URL = "/read/all"
 
