@@ -14,9 +14,11 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 if (process.env.NODE_ENV === "production") {
+  const path=require("path")
+  
   app.use(express.static("build"))
   app.get("*", (req, res) => {
-    req.sendFile(path.resolve(__dirname, "build", "index.html"))
+    res.sendFile(path.resolve(__dirname, "frontend","build", "index.html"))
   })
 }
 
