@@ -4,6 +4,9 @@
             "src":"./backend/server.js",
             "use":"@vercel/node"
         }
-    ]
+    ],
+    
+    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+
 
 }
