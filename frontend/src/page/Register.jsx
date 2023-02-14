@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import {toast} from "react-toastify"
 
 const API_URL = "/create"
-export default function Register() {
+export default function Register({setIsLoggedIn}) {
   const navigate = useNavigate()
   //handleSubmit
   const handleSubmit = async (e) => {
@@ -19,6 +19,7 @@ export default function Register() {
     })
     if (response.data) {
       localStorage.setItem("user", JSON.stringify({firstName}))
+      setIsLoggedIn(true)
       toast.success("Joined Successfully")
       navigate('/')
     }

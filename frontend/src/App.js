@@ -4,14 +4,33 @@ import Home from "./page/Home"
 import Register from "./page/Register"
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
+import { useState } from "react"
+
 function App() {
-  const user = JSON.parse(localStorage.getItem("user"))
-  
+  // const [user, setUser] = useState("")
+
+  // const getUser = useCallback(() => {
+  //   return JSON.parse(localStorage.getItem("user"))
+  // }, [])
+  // useEffect(() => {
+  //   setUser(getUser())
+  // }, [getUser])
+  // console.log("rendered",user)
+
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   return (
-    <div className="App">
+    <div>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/register" element={!user ? <Register /> : <Navigate to="/" />} />
+        <Route
+          path="/"
+          element={
+            isLoggedIn ? <Home setIsLoggedIn={setIsLoggedIn} /> : <Navigate to="/register" />
+          }
+        />
+        <Route
+          path="/register"
+          element={!isLoggedIn ? <Register setIsLoggedIn={setIsLoggedIn} /> : <Navigate to="/" />}
+        />
         <Route path="*" element={<Navigate to="/register" />} />
       </Routes>
       <ToastContainer />

@@ -30,7 +30,7 @@
       font-family: "Pacifico", cursive;
     }
     .title {
-      color: rgb(31, 96, 68);
+      color: rgb(220, 248, 80);
       font-size: 38px;
       font-weight: bold;
     }
@@ -75,6 +75,38 @@
   }
 }
 
+
+.home{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  div{
+    display: flex;
+    justify-content: space-between;
+
+    h3{
+      font-size: 20px;
+    }
+
+    button{
+       background-color: rgb(32, 111, 54);
+        border: none;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+  }
+
+  .box{
+    height: 400px;width: 100%;
+  }
+
+}
 
 
 
